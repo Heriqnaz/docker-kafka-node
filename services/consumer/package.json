@@ -1,0 +1,20 @@
+{
+  "name": "kafka-nodejs-example-consumer",
+  "version": "1.0.0",
+  "description": "A kafka consumer that inserts data into PostgreSQL.",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "npx tsc && node src/consumer.js"
+  },
+  "dependencies": {
+    "kafka-node": "2.6.1",
+    "pg": "^8.7.1",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.40"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "typescript": "^4.4.4"
+  }
+}

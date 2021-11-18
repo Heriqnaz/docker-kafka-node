@@ -1,0 +1,10 @@
+services/consumer/node_modules
+services/consumer/package-lock.json
+services/producer/node_modules
+services/producer/package-lock.json
+services/consumer/src/consumer.js
+services/consumer/src/consumer.js.map
+services/consumer/type.js
+services/consumer/type.js.map
+services/consumer/src/model/EmployeesModel.js
+services/consumer/src/model/EmployeesModel.js.map
