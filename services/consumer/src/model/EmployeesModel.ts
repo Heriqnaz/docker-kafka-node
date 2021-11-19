@@ -42,4 +42,34 @@ export class EmployeesModel extends BaseEntity  {
             .values(employeesData)
             .execute();
     }
+
+    static async getEmployees() {
+        return EmployeesModel.createQueryBuilder("employees")
+            .select()
+            .from(EmployeesModel, "Employees")
+            .execute();
+    }
+
+    static async getEmployerById(id: number) {
+        return EmployeesModel.createQueryBuilder("employees")
+            .select()
+            .where("employees.id = :id", { id })
+            .getRawOne();
+    }
+
+    static async updateEmployerById(id: number) {
+        return EmployeesModel.createQueryBuilder("employees")
+            .update(EmployeesModel)
+            .set({ firstName: "NewFirstName", lastName: "NewLastName" })
+            .where("id = :id", { id })
+            .execute();
+    }
+
+    static async deleteEmployerById(id: number) {
+        return EmployeesModel.createQueryBuilder("employees")
+            .delete()
+            .from(EmployeesModel)
+            .where("id = :id", { id })
+            .execute();
+    }
 }
